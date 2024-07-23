@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Brendon's CV</title>
+    </head>
+    <body>
+        <div id="header-main" >
+
+            <!-- NAVIGATIONAL CONTENT -->
+            <header>
+                <nav id="nav-bar" >
+                    <div id="nav-content" >
+                        <button id="drop-btn" >=</button>
+                        <!-- NAV BAR DROP DOWN CONTENT -->
+                        <div id="hidden-content" >
+                            <a href="#" >Home</a>
+                            <a href="#intro" >Introduction</a>
+                            <a href="#skills" >Skills</a>
+                            <a href="#education" >Education</a>
+                            <a href="#career" >Career</a>
+                            <a href="#interests" >Interests</a>
+                            <a href="#contact" >Contact Me</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- MAIN CONTENT -->
+            <main>
+                
+                <section id="content">
+                    <!-- PAGE TITLE -->
+                    <h1>BRENDON LUICIEN</h1>
+
+                    <!-- CV INTRODUCTION -->
+                    <h3 id="intro" >PERSONAL PROFILE</h4>
+                    <p id="intro-p" >I have a passion for technology and learning new skills. My current goal is to transition into a new career 
+                        in IT. I am currently self-studying and taking courses to gain skills and knowledge to set me up for an 
+                        entry level position. I have the enthusiasm and ambition to learn the skills needed to excel in the 
+                        information technology industry.
+                    </p>
+                    <br/>
+                    <hr/>
+                    
+                    <!-- SKILLS SECTION -->
+                    <h3 id="skills" >SKILLS</h3>
+                    <div>
+                        <ul>
+                            <li>Full stack development</li>
+                            <li>React & NextJS </li>
+                            <li>ExpressJS </li>
+                            <li>PG/SQL</li>
+                        </ul>
+                    </div>
+                    <br/>
+                    <hr/>
+                    
+                    <!-- EDUCATION SECTION -->
+                    <h3 id="education" >EDUCATION</h3>
+                    <ul>
+                        <li>
+                            <h4>BACHELOR OF ENGINEERING (HONS), AUT - AUCKLAND UNIVERSITY OF TECHNOLOGY</h4>
+                            <p>I learned fundamentals of mechanical and electrical engineering, engineering mathematics III and 
+                                programming with C++. I also worked with CAD software to develop functional models. I used this 
+                                knowledge to work on a team project and design a customized cement truck to meet client needs.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>IBM FULL STACK SOFTWARE DEVELOPER CERTIFICATE, COURSERA</h4>
+                            <p>I completed 10 fundamental courses, 1 project and a final assessment to display competence as a full 
+                                stack developer. Using frameworks such as Nodejs, React, Flask and Django along with technologies such 
+                                as Git, Docker and IBM Cloud to develop web applications.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>GOOGLE IT SUPPORT CERTIFICATE, COURSERA </h4>
+                            <p>The 5-course certificate covered the fundamentals of technical support, networking, operating systems, 
+                                system administration and IT security. It gave me a sound understanding of how things work and the 
+                                best practices when working with them.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>FULL STACK ENGINEER, CODECADEMY</h4>
+                            <p>This course has provided me with even deeper knowledge and experience of full-stack software 
+                                engineering which builds on my existing knowledge from the IBM full stack course. During this course I 
+                                worked on 2 projects; a React web app that connects to the Spotify API to search and create a playlist on 
+                                the user's account and a reddit clone website. I am currently working on building a full-stack E
+                                Commerce website with Next.Js for frontend, Express.Js for backend and PostgreSQL for database. 
+                            </p>
+                        </li>
+                        <li>
+                            <h4>DIPLOMA IN SOFTWARE ENGINEERING, MISSION READY HQ</h4>
+                            <p>I am starting a diploma in software engineering to polish my knowledge with industry best practices. 
+
+                            </p>
+                        </li>
+                    </ul>
+                    <br/>
+                    <hr/>
+
+                    <!-- WORK EXPERIENCE SECTION -->
+                    <h3 id="career" >CAREER</h3>
+                    <ul>
+                        <li>
+                            <h4>ADVANCED PERSONNEL SERVICES LIMITED</h4>
+                            <h5>2020 MAR - 2021 JAN</h5>
+                            <p>Food wholesale pick & packer, stock replenish and container unloading.  
+                                Electrical wholesale pick & packer, stock control and inwards goods.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>COMPUTER DYNAMICS LIMITED </h4>
+                            <h5>JAN 2021 - PRESENT</h5>
+                            <p>I started as a warehouse store person and am currently working in customer service and QA. Before 
+                                getting positioned in customer service, I oversaw the return of goods to make sure they are up to 
+                                sellable standards. I also have experience training employees and writing SOP. I am a good problem 
+                                solver with an aptitude for technology, which put me in a position to be relied on for navigating the 
+                                company software to solve order discrepancies and errors.
+                            </p>
+                        </li>
+                    </ul>
+                    <br/>
+                    <hr/>
+
+                    <!-- INTERESTS SECTION -->
+                    <h3 id="interests" >INTERESTS</h3>
+                    <p id="interests-p" >In my free time I like to do gardening and working out. I also enjoy playing video games, reading comics 
+                        and watching anime. I am competent in reading and speaking Japanese which I learned through my 
+                        hobbies. Recently I've found a new passion in IT which led me to seek a new career in software and cloud 
+                        engineering.
+                    </p>
+
+                    <!-- CONTACT ME FORM SECTION -->
+                    <fieldset id="form-popup" >
+                        <legend >
+                            <h3 id="contact" >CONTACT ME</h3>
+                        </legend>
+                        <form action="POST" id="contact-form" >
+
+                            <label for="name" >Name : </label>
+                            <input type="text" id="name" name="full-name" required placeholder="John Doe" >
+
+                            <label for="email" >Email : </label>
+                            <input type="email" name="email" required placeholder="john.doe@example.com" >
+
+                            <label for="topic" >Topic : </label>
+                            <select id="topic" >
+                                <option value="" selected disabled>-- Contact Reason --</option>
+                                <option value="job-offer">Job Offer</option>
+                                <option value="social">Social</option>
+                                <option value="other" >Other <input type="text" placeholder="Other" ></option>
+                            </select>
+                            
+                            <label for="date" >Date : </label>
+                            <input type="date" id="date">
+                            <label for="message" >Message : </label>
+                            <textarea id="message" required placeholder="Write your message..." ></textarea>
+                            <button type="submit" id="contact-me-btn" >Contact Me</button>
+                        </form>
+                    </fieldset>
+                </section>
+
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="contact" >
+            <p>Developer: Brendon Luicien</p>
+            <p>Product: Mission One</p>
+            <p>Email Me: <a href="mailto:brendonl@missionreadyhq.com">brendonl@missionreadyhq.com</a></p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,266 @@
+/* ===== PAGE STYLING ========== */
+
+* {
+    margin: 0
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden scroll;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header-main {
+    display: flex;
+    overflow-x: hidden;
+}
+
+hr {
+    box-shadow: 2px 2px 5px 3px rgba(122, 122, 122, 0.411);
+}
+
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+/* ========== NAVIGATION STYLING ========== */
+
+#nav-bar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+header {
+    position: fixed;
+}
+
+#nav-bar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav-content {
+    float: left;
+    overflow: hidden;
+}
+
+#nav-content #drop-btn {
+    min-width: 160px;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+#nav-content:hover #drop-btn {
+    animation-name: button;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#hidden-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    min-height: 400px;
+    box-shadow: 0px 3px 10px 0px rgba(90, 90, 90, 0.473) ;
+    z-index: 1;
+    
+    animation: appear linear;
+    animation-duration: 500ms;
+}
+
+#hidden-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+#hidden-content a:hover {
+    background-color: #ddd;
+    animation-name: font-fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#nav-content:hover #hidden-content {
+    display: block;
+}
+
+#hidden-content a:active {
+    animation-name: btn-click;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+/* ========== BODY STYLING ========== */
+
+main {
+    padding: 0 15%;
+}
+#content > h1 {
+    padding: 2.5rem 0;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+#content {
+    padding: 0 5%;
+    padding-bottom: 5%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#content > h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+#content ul {
+    list-style: circle
+}
+
+li > h4,
+li > p {
+    padding-top: 0.5rem;
+}
+
+#content > ul > li, 
+#intro-p,
+#interests-p {
+    transition: 1s;
+}
+
+#content > ul > li:hover,
+#intro-p:hover,
+#interests-p:hover {
+    list-style: none;
+    scale: 1.2;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+/* ===== FORM CSS ===== */
+
+fieldset {
+    margin-top: 2rem;
+    padding: 20px;
+    width: 30%;
+    background-color: #cccccc6c;
+    transition: 1s;
+}
+
+fieldset:hover {
+    scale: 1.3;
+    background-color: #cccccc;
+}
+
+legend {
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid rgba(95, 95, 95, 0.445);
+    background-color: #cccccc;
+}
+
+
+#contact-me-btn {
+    width: 150px;
+    padding: 0.5rem 2rem;
+    background-color: #333;
+    color: white;
+    border: outset rgba(128, 128, 128, 0.568);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+#contact-me-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+#contact-me-btn:active {
+    background-color: rgb(133, 0, 0);
+    border: inset rgb(167, 167, 167);
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 700;
+}
+
+input, textarea, select {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+input:focus, 
+textarea:focus, 
+textarea:focus::placeholder, 
+input:focus::placeholder,
+select option {
+    background-color:#bfb4ff;
+    color: white;
+}
+
+
+/* ========== FOOTER STYLING ========== */
+
+footer {
+    padding: 0 50px;
+    height: 5%;
+    background-color: rgba(0, 255, 255, 0.384);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes font-fade {
+    100% { background-color: #8a75ff; color: white; scale: 1.1; box-shadow: 2px 2px 5px 2px #dcd6ff ;}
+}
+
+@keyframes btn-click {
+    100% { background-color: #a3a3a3; color: white;}
+}
+
+@keyframes button {
+    100% { background-color: #ff0000;}
+}
+
+@keyframes appear {
+    from { 
+        opacity: 0;
+        clip-path: inset(0 100% 100% 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
