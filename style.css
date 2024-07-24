@@ -12,7 +12,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#header-main {
+#nav-main {
     display: flex;
     overflow-x: hidden;
 }
@@ -26,18 +26,35 @@ hr {
     color: black;
 }
 
+/* ========== HEADER STYLING ========== */
+header {
+    text-align: center;
+}
+
+header > h1 {
+    padding: 1rem 0;
+    font-size: 3rem;
+    font-weight: bolder;
+    background-color: #920741;
+    color: white;
+}
+
+
 /* ========== NAVIGATION STYLING ========== */
 
-#nav-bar {
+nav {
     overflow: hidden;
     background-color: #333;
+    
 }
 
-header {
-    position: fixed;
+#nav-bar {
+    position: sticky;
+    top: 0;
+    max-width: 160px;
 }
 
-#nav-bar a {
+nav a {
     float: left;
     font-size: 16px;
     color: white;
@@ -113,11 +130,6 @@ header {
 
 main {
     padding: 0 15%;
-}
-#content > h1 {
-    padding: 2.5rem 0;
-    font-size: 5rem;
-    font-weight: bolder;
 }
 
 #content {
