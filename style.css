@@ -23,6 +23,7 @@
     }
 }
 
+
 /* ===== PAGE STYLING ========== */
 
 * {
@@ -52,6 +53,7 @@ hr {
     color: black;
 }
 
+
 /* ========== HEADER STYLING ========== */
 
 header {
@@ -77,6 +79,7 @@ header > h1 {
 
 #nav-container {
     position: sticky;
+    width: 10%;
     min-width: 160px;
 }
 
@@ -117,7 +120,7 @@ header > h1 {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    min-height: 400px;
+    width: 100%;
     box-shadow: 0px 3px 10px 0px #5a5a5a79 ;
     z-index: 1;
     
@@ -153,13 +156,11 @@ header > h1 {
     animation-fill-mode: forwards;
 }
 
-#nav-linkedin > i {
-}
 
 /* ========== BODY STYLING ========== */
 
 main {
-    padding: 0 15%;
+    padding: 0 15% 0 5%;
 }
 
 #content {
@@ -210,6 +211,7 @@ article > ul > li:hover,
     border-radius: 20px;
 }
 
+
 /* ===== FORM CSS ===== */
 
 fieldset {
@@ -218,12 +220,6 @@ fieldset {
     width: 30%;
     background-color: #cccccc6c;
     transition: 1s;
-}
-
-fieldset:hover {
-    scale: 1.3;
-    transform: translate(30px, -30px);
-    background-color: #cccccc;
 }
 
 legend {
@@ -285,15 +281,15 @@ select option {
 footer {
     display: flex;
     align-items: center;
-    padding: 0 50px;
-    height: 5%;
+    height: 50px;
+    padding: 0 25px;
     background-color: #920741;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 footer > p {
-    margin-right: 50px;
+    margin-right: 10px;
 }
 
 footer a {
@@ -301,10 +297,80 @@ footer a {
 }
 
 #social-links {
+    display: flex;
+    flex-direction: row;
     margin-left: auto;
 }
 
-#social-links > a {
+#social-links a {
     text-decoration: none;
     color: white;
+    
+}
+
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Screen sizes under 720px width */
+@media screen and (max-width: 720px) {
+
+    main {
+        padding: 0;
+    }
+
+    #nav-main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-container {
+        position: sticky;
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+    }
+
+    #social-links {
+        display: none;
+    }
+}
+
+/* Screen sizes below 1020px */
+@media screen and (max-width: 1020px) {
+    #social-links {
+        flex-direction: column;
+        margin-left: auto;
+    }
+}
+
+/* Screen sizes over 1980px width */
+@media screen and (min-width: 1980px) {
+
+    fieldset {
+        transition: 1s;
+    }
+    
+    fieldset:hover {
+        scale: 1.3;
+        transform: translate(30px, -30px);
+        background-color: #cccccc;
+    }
+
+    footer {
+        font-size: 1.2rem;
+        padding: 0 50px;
+    }
+    
+    footer > p {
+        margin-right: 50px;
+    }
+
+    #social-links {
+        flex-direction: row;
+        margin-left: auto;
+    }
 }
