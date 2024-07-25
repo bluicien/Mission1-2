@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Meta data -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+        <!-- FontAwesome Icons -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <!-- Link CSS -->
         <link rel="stylesheet" href="style.css">
-        <title>Brendon's CV</title>
+        <title>Brendon's Profile</title>
     </head>
 
     <body>
@@ -17,12 +22,13 @@
              <h1>BRENDON LUICIEN</h1>
         </header>
         
-        <div id="nav-main" >
+        <!-- NAVBAR AND MAIN CONTAINER -->
+        <div id="nav-main-container" >
 
             <!-- NAVIGATIONAL CONTENT -->
-            <div id="nav-bar"  >
-                <nav>
-                    <div id="nav-content" >
+            <nav id="nav-container" >
+                <div id="nav-bar"  >
+                    <div id="drop-menu" >
                         <button id="drop-btn" >=</button>
                         <!-- NAV BAR DROP DOWN CONTENT -->
                         <div id="hidden-content" >
@@ -33,10 +39,11 @@
                             <a href="#career" >Career</a>
                             <a href="#interests" >Interests</a>
                             <a href="#contact" >Contact Me</a>
+                            <a href="https://www.linkedin.com/in/bluicien-bl2" id="nav-linkedin" target="_blank" >LinkedIn <i class="fa-brands fa-linkedin fa-xl"></i></a>
                         </div>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
 
             <!-- MAIN CONTENT -->
             <main>
@@ -44,28 +51,28 @@
                 <section id="content">
 
                     <!-- CV INTRODUCTION -->
-                    <h3 id="intro" >PERSONAL PROFILE</h4>
-                    <p id="intro-p" >Etiam et suscipit diam. Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci 
-                        luctus et ultrices posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, 
-                        sit amet tempus tortor bibendum. Curabitur nec ligula tellus. Aenean dapibus dapibus tellus in pellentesque. 
-                        Nunc cursus lacus non libero accumsan, et bibendum nibh feugiat. 
-                    </p>
+                     <article  id="intro" >
+                        <h3>PERSONAL PROFILE</h4>
+                        <p id="intro-p" >Etiam et suscipit diam. Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci 
+                            luctus et ultrices posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, 
+                            sit amet tempus tortor bibendum. Curabitur nec ligula tellus. Aenean dapibus dapibus tellus in pellentesque. 
+                            Nunc cursus lacus non libero accumsan, et bibendum nibh feugiat. 
+                        </p>
+                    </article>
                     <br/>
                     <hr/>
                     
                     <!-- SKILLS SECTION -->
-                    <h3 id="skills" >SKILLS</h3>
-                    <section id="skills-flex" >
-                        <div>
+                    <article id="skills" >
+                        <h3>SKILLS</h3>
+                        <div id="skills-flex" >
                             <ul>
                                 <li>Full stack development</li>
                                 <li>HTML, CSS & JavaScript</li>
                                 <li>React & NextJS</li>
                                 <li>Git</li>
                             </ul>
-                        </div>
                         
-                        <div>
                             <ul>
                                 <li>NodeJS & ExpressJS</li>
                                 <li>C# & .NET</li>
@@ -73,94 +80,98 @@
                                 <li>PG/SQL</li>
                             </ul>
                         </div>
-                    </section>
+                    </article>
                     <br/>
                     <hr/>
                     
                     <!-- EDUCATION SECTION -->
-                    <h3 id="education" >EDUCATION</h3>
-                    <ul>
-                        <li>
-                            <h4>BACHELOR OF ENGINEERING (HONS), AUT - AUCKLAND UNIVERSITY OF TECHNOLOGY</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu nisi at nibh volutpat maximus.
-                                Suspendisse convallis magna risus, ut tempor nunc ultricies et. Nullam hendrerit tellus nisl. 
-                                Etiam nec viverra nunc. Nullam enim neque, accumsan non sagittis eget, efficitur non dolor. 
-                                Mauris ac congue augue, pellentesque varius nisl. Fusce in fermentum velit, vulputate rhoncus massa. 
-                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                            </p>
-                        </li>
-                        <li>
-                            <h4>IBM FULL STACK SOFTWARE DEVELOPER CERTIFICATE, COURSERA</h4>
-                            <p>
-                                Nam ultricies ligula quis neque viverra, et hendrerit ante pulvinar. Nullam nec ultrices massa, 
-                                a pulvinar mauris. Ut ac ex eleifend, blandit enim nec, tincidunt arcu. Vivamus aliquam ullamcorper porta. 
-                                Mauris accumsan vel sapien ut euismod. Pellentesque augue nisl, aliquet at euismod a, interdum ut mi. 
-                                Proin at pharetra nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-                                Cras accumsan ligula nisi, a egestas velit ultricies nec. Vestibulum efficitur lacus ante, et eleifend orci posuere non.
-                            </p>
-                        </li>
-                        <li>
-                            <h4>GOOGLE IT SUPPORT CERTIFICATE, COURSERA </h4>
-                            <p>
-                                Pellentesque tempor, elit vitae elementum hendrerit, metus nulla viverra odio, non volutpat metus arcu ac velit. 
-                                Etiam porta tortor in erat maximus vulputate. Nullam at lobortis neque. Orci varius natoque penatibus et magnis 
-                                dis parturient montes, nascetur ridiculus mus. Aenean blandit orci feugiat est hendrerit, et feugiat velit ornare. 
-                            </p>
-                        </li>
-                        <li>
-                            <h4>FULL STACK ENGINEER, CODECADEMY</h4>
-                            <p>
-                                Etiam scelerisque lobortis pretium. Cras sed felis efficitur, finibus felis vitae, accumsan leo. 
-                                Cras enim enim, tempor eget vehicula congue, posuere nec velit. Cras blandit hendrerit felis. 
-                                Nulla nec massa mollis, facilisis quam ornare, posuere nulla. Aenean dapibus dapibus tellus in pellentesque.
-                                Nunc cursus lacus non libero accumsan, et bibendum nibh feugiat. Quisque lacus purus, 
-                                blandit at tincidunt vulputate, porttitor in elit. Maecenas rutrum vestibulum dictum. 
-                            </p>
-                        </li>
-                    </ul>
+                     <article id="education" >
+                            <h3>EDUCATION</h3>
+                            <ul>
+                                <li>
+                                <h4>BACHELOR OF ENGINEERING (HONS), AUT - AUCKLAND UNIVERSITY OF TECHNOLOGY</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu nisi at nibh volutpat maximus.
+                                    Suspendisse convallis magna risus, ut tempor nunc ultricies et. Nullam hendrerit tellus nisl. 
+                                    Etiam nec viverra nunc. Nullam enim neque, accumsan non sagittis eget, efficitur non dolor. 
+                                    Mauris ac congue augue, pellentesque varius nisl. Fusce in fermentum velit, vulputate rhoncus massa. 
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                </p>
+                            </li>
+                            <li>
+                                <h4>IBM FULL STACK SOFTWARE DEVELOPER CERTIFICATE, COURSERA</h4>
+                                <p>
+                                    Nam ultricies ligula quis neque viverra, et hendrerit ante pulvinar. Nullam nec ultrices massa, 
+                                    a pulvinar mauris. Ut ac ex eleifend, blandit enim nec, tincidunt arcu. Vivamus aliquam ullamcorper porta. 
+                                    Mauris accumsan vel sapien ut euismod. Pellentesque augue nisl, aliquet at euismod a, interdum ut mi. 
+                                    Proin at pharetra nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                                    Cras accumsan ligula nisi, a egestas velit ultricies nec. Vestibulum efficitur lacus ante, et eleifend orci posuere non.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>GOOGLE IT SUPPORT CERTIFICATE, COURSERA </h4>
+                                <p>
+                                    Pellentesque tempor, elit vitae elementum hendrerit, metus nulla viverra odio, non volutpat metus arcu ac velit. 
+                                    Etiam porta tortor in erat maximus vulputate. Nullam at lobortis neque. Orci varius natoque penatibus et magnis 
+                                    dis parturient montes, nascetur ridiculus mus. Aenean blandit orci feugiat est hendrerit, et feugiat velit ornare. 
+                                </p>
+                            </li>
+                            <li>
+                                <h4>FULL STACK ENGINEER, CODECADEMY</h4>
+                                <p>
+                                    Etiam scelerisque lobortis pretium. Cras sed felis efficitur, finibus felis vitae, accumsan leo. 
+                                    Cras enim enim, tempor eget vehicula congue, posuere nec velit. Cras blandit hendrerit felis. 
+                                    Nulla nec massa mollis, facilisis quam ornare, posuere nulla. Aenean dapibus dapibus tellus in pellentesque.
+                                    Nunc cursus lacus non libero accumsan, et bibendum nibh feugiat. Quisque lacus purus, 
+                                    blandit at tincidunt vulputate, porttitor in elit. Maecenas rutrum vestibulum dictum. 
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
                     <br/>
                     <hr/>
-
                     <!-- WORK EXPERIENCE SECTION -->
-                    <h3 id="career" >CAREER</h3>
-                    <ul>
-                        <li>
-                            <h4>ADVANCED PERSONNEL SERVICES LIMITED</h4>
-                            <h5>2020 MAR - 2021 JAN</h5>
-                            <p>
-                                Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-                                posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, sit amet tempus tortor 
-                                bibendum. Curabitur nec ligula tellus. Integer fringilla, leo id mollis semper, ex metus suscipit magna, id aliquet nunc sem eu ligula.
-                            </p>
-                        </li>
-                        <li>
-                            <h4>COMPUTER DYNAMICS LIMITED </h4>
-                            <h5>JAN 2021 - PRESENT</h5>
-                            <p>
-                                Etiam et suscipit diam. Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci 
-                                luctus et ultrices posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, 
-                                sit amet tempus tortor bibendum. Curabitur nec ligula tellus. Aenean dapibus dapibus tellus in pellentesque. 
-                                Nunc cursus lacus non libero accumsan, et bibendum nibh feugiat. 
-                            </p>
-                        </li>
-                    </ul>
-                    <br/>
+                    <article id="career" >
+                        <h3>CAREER</h3>
+                        <ul>
+                            <li>
+                                <h4>ADVANCED PERSONNEL SERVICES LIMITED</h4>
+                                <p>
+                                    Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
+                                    posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, sit amet tempus tortor 
+                                    bibendum. Curabitur nec ligula tellus. Integer fringilla, leo id mollis semper, ex metus suscipit magna, id aliquet nunc sem eu ligula.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>COMPUTER DYNAMICS LIMITED </h4>
+                                <p>
+                                    Etiam et suscipit diam. Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci 
+                                    luctus et ultrices posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, 
+                                    sit amet tempus tortor bibendum. Curabitur nec ligula tellus. Aenean dapibus dapibus tellus in pellentesque. 
+                                    Nunc cursus lacus non libero accumsan, et bibendum nibh feugiat. 
+                                </p>
+                            </li>
+                        </ul>
+                        <br/>
+                    </article>
                     <hr/>
 
                     <!-- INTERESTS SECTION -->
-                    <h3 id="interests" >INTERESTS</h3>
-                    <p id="interests-p" >In my free time I like to do gardening and working out. I also enjoy playing video games, reading comics 
-                        and watching anime. I am competent in reading and speaking Japanese which I learned through my 
-                        hobbies. Recently I've found an interest in software engineering which led me to seek a new career in software development.
-                    </p>
+                     <article id="interests" >
+                        <h3>INTERESTS</h3>
+                        <p id="interests-p" >In my free time I like to do gardening and working out. I also enjoy playing video games, reading comics 
+                            and watching anime. I am competent in reading and speaking Japanese which I learned through my 
+                            hobbies. I have developed a new interest in software engineering which led me to seek a new career as a fullstack developer.
+                        </p>
+                    </article>
 
                     <!-- CONTACT ME FORM SECTION -->
                     <fieldset id="form-popup" >
                         <legend >
                             <h3 id="contact" >CONTACT ME</h3>
                         </legend>
-                        <form action="POST" id="contact-form" >
+
+                        <form action="mailto:brendonl@missionreadyhq.com" id="contact-form" >
 
                             <label for="name" >Name : </label>
                             <input type="text" id="name" name="full-name" required placeholder="John Doe" >
@@ -182,17 +193,25 @@
                             <textarea id="message" required placeholder="Write your message..." ></textarea>
                             <button type="submit" id="contact-me-btn" >Contact Me</button>
                         </form>
+
                     </fieldset>
+
                 </section>
 
             </main>
         </div>
 
-        <!-- FOOTER -->
+        <!-- FOOTER SECTION -->
         <footer id="contact" >
-            <p>Developer: Brendon Luicien</p>
+            <p>Copyright© Brendon Luicien. All rights reserved</p>
             <p>Product: Mission One</p>
             <p>Email Me: <a href="mailto:brendonl@missionreadyhq.com">brendonl@missionreadyhq.com</a></p>
+            <div id="social-links">
+                Social Media: 
+                <a href="https://www.linkedin.com" target="_blank" ><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                <a href="https://www.github.com" target="_blank" ><i class="fa-brands fa-github fa-xl"></i></a>
+                <a href="https://www.facebook.com" target="_blank" ><i class="fa-brands fa-facebook fa-xl"></i></a>
+            </div>
         </footer>
     </body>
 </html>
