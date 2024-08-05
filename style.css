@@ -19,7 +19,7 @@
 
 @keyframes rotate-logo {
     50% { transform: rotate(360deg);}
-    100% { transform: rotate(-0deg);}
+    100% { transform: rotate(0deg);}
 }
 
 
@@ -66,9 +66,10 @@ header {
 }
 
 header > h1 {
+    width: 100%;
     padding: 0 2rem;
     color: white;
-    background-color: #8a75ff;
+    background-color: #7e7e7eb6;
     text-align: center;
     font-size: 5rem;
     font-style: italic;
@@ -387,7 +388,7 @@ footer a {
 .skills-flex {
     position: relative;
     top: 30%;
-    width: 80%;
+    width: 100%;
     min-height: 250px;
     overflow: hidden;
 }
@@ -410,10 +411,10 @@ footer a {
     align-items: center;
     padding: 1rem;
     color: white;
-    border-radius: 50%;
+    border: 0px solid black;
     gap: 5px;
-    z-index: 3;
 }
+
 
 .skills-list img {
     width: 150px;
@@ -421,10 +422,9 @@ footer a {
     z-index: 5;
 }
 
-.skills-flex:hover img {
+/* .skills-flex:hover img {
     animation: rotate-logo 8s ease-in-out 0s infinite ;
-    animation-timing-function: ease-in-out;
-}
+} */
 
 
 .slide-skills > p {
