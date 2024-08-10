@@ -79,9 +79,11 @@ function spinIcon(event) {
 // Function takes 2 arguments, mouse event and element position from getBoundingClientRect()
 // and de-structures them. Then checks if the mouse is hovering over the element
 function checkHover ({clientX, clientY}, {x, y, width, height}) {
-  let rightSideX = x + width;
-  let bottomSideY = y + height;
 
+  let rightSideX = x + width; // X coord for right side of the element
+  let bottomSideY = y + height; // Y coord for bottom side of the element
+
+  // Check if mouse is within the coords of the element and return true if it is
   if (
     (clientX + 1)>= x &&
     (clientX - 1) <= rightSideX &&
@@ -92,4 +94,30 @@ function checkHover ({clientX, clientY}, {x, y, width, height}) {
   } else {
     return false;
   }
+}
+
+// Background music mute on/off
+function soundChange() {
+  const soundBtn = document.getElementById("sound-control"); // Mute/Unmute button
+  const audioPlayer = document.getElementById("audio-player"); // audio html for background music
+
+  const mute = '<i class="fa-solid fa-volume-xmark fa-xl"></i>' // Muted icon
+  const soundOn = '<i class="fa-solid fa-volume-high fa-xl"></i>' // Sound icon
+
+  // Switch mute on/off based on current state
+  audioPlayer.muted = !audioPlayer.muted;
+
+  // If muted, unmute and change style
+  if (audioPlayer.muted) {
+    soundBtn.innerHTML = mute;
+    soundBtn.style.backgroundColor = "white"
+    soundBtn.style.color = "#333"
+  } 
+  // If unmuted, mute and change style
+  else {
+    soundBtn.innerHTML = soundOn
+    soundBtn.style.backgroundColor = "#333"
+    soundBtn.style.color = "white"
+  }
+  return;
 }

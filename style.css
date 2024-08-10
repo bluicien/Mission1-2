@@ -49,8 +49,22 @@ hr {
 
 ::selection {
     background-color: #8a75ff;
-    color: white;
 }
+
+::-webkit-scrollbar {
+    background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #920741;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
 
 
 /* ========== HEADER STYLING ========== */
@@ -80,15 +94,14 @@ header > h1 {
 
 /* ========== NAVIGATION STYLING ========== */
 
-#nav-bar {
-    overflow: hidden;
-    background-color: red;
-}
-
 #nav-container {
     position: sticky;
     width: 10%;
     min-width: 160px;
+}
+#nav-bar {
+    overflow: hidden;
+    background-color: red;
 }
 
 #nav-bar a {
@@ -130,7 +143,7 @@ header > h1 {
     min-width: 160px;
     width: 100%;
     box-shadow: 0px 3px 10px 0px #5a5a5a79 ;
-    z-index: 1;
+    z-index: 10;
     
     animation: nav-appear linear;
     animation-duration: 500ms;
@@ -168,7 +181,38 @@ header > h1 {
 /* ========== BODY STYLING ========== */
 
 main {
+    width: 90%;
     padding: 0 15% 0 5%;
+}
+
+#opt-btns {
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control-btn:hover, #sound-control:hover {
+    background-color: white;
+    color: #333;
 }
 
 #content {
@@ -400,7 +444,6 @@ footer a {
     grid-template-columns: repeat(13, 1fr);
     gap: 5px;
     pointer-events: none;
-    z-index: 5;
 }
 
 .slide-skills {
@@ -419,7 +462,6 @@ footer a {
 .skills-list img {
     width: 150px;
     height: 150px; 
-    z-index: 5;
 }
 
 /* .skills-flex:hover img {
