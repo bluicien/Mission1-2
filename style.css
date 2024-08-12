@@ -9,18 +9,17 @@
 }
 
 @keyframes button {
-    100% { background-color: #ff0000;}
+    100% { background-color: #333;}
 }
 
 @keyframes nav-appear {
-    from { 
-        opacity: 0;
-        clip-path: inset(0 100% 100% 0);
-    }
-    to {
-        opacity: 1;
-        clip-path: inset(0 0 0 0);
-    }
+    0% { opacity: 0; clip-path: inset(0 100% 100% 0); }
+    100% { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+
+@keyframes rotate-logo {
+    50% { transform: rotate(360deg);}
+    100% { transform: rotate(0deg);}
 }
 
 
@@ -49,38 +48,60 @@ hr {
 }
 
 ::selection {
-    background-color: yellow;
-    color: black;
+    background-color: #8a75ff;
 }
+
+::-webkit-scrollbar {
+    background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #920741;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
 
 
 /* ========== HEADER STYLING ========== */
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/public/code-blue.gif") no-repeat ;
+    background-size: cover;
+    height: 15%;
+    border-bottom: 2px solid blue;
 }
 
 header > h1 {
-    padding: 1rem 0;
-    font-size: 3rem;
+    width: 100%;
+    padding: 0 2rem;
+    color: white;
+    background-color: #7e7e7eb6;
+    text-align: center;
+    font-size: 5rem;
     font-style: italic;
     font-weight: 900;
-    background-color: #920741;
-    color: white;
+    border-radius: 10px;
 }
 
 
 /* ========== NAVIGATION STYLING ========== */
 
-#nav-bar {
-    overflow: hidden;
-    background-color: #333;
-}
-
 #nav-container {
     position: sticky;
     width: 10%;
     min-width: 160px;
+}
+#nav-bar {
+    overflow: hidden;
+    background-color: red;
 }
 
 #nav-bar a {
@@ -122,7 +143,7 @@ header > h1 {
     min-width: 160px;
     width: 100%;
     box-shadow: 0px 3px 10px 0px #5a5a5a79 ;
-    z-index: 1;
+    z-index: 10;
     
     animation: nav-appear linear;
     animation-duration: 500ms;
@@ -160,7 +181,38 @@ header > h1 {
 /* ========== BODY STYLING ========== */
 
 main {
+    width: 90%;
     padding: 0 15% 0 5%;
+}
+
+#opt-btns {
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control-btn:hover, #sound-control:hover {
+    background-color: white;
+    color: #333;
 }
 
 #content {
@@ -168,6 +220,7 @@ main {
     padding-bottom: 5%;
     border-left: 2px solid black;
     border-right: 2px solid black;
+    background-color: #1600490a;
 }
 
 #content ul {
@@ -182,10 +235,10 @@ article > h3 {
     padding-bottom: 1rem;
 }
 
-#skills-flex {
+/* #skills-flex {
     display: flex;
     gap: 10%;
-}
+} */
 
 li > h4,
 li > p {
@@ -194,15 +247,13 @@ li > p {
 
 #intro-p,
 article li, 
-#interests-p,
-#skills-flex > ul {
+#interests-p {
     transition: 1s;
 }
 
 article > ul > li:hover,
 #intro-p:hover,
-#interests-p:hover,
-#skills-flex > ul:hover {
+#interests-p:hover {
     list-style: none;
     scale: 1.2;
     padding: 1rem;
@@ -374,3 +425,60 @@ footer a {
         margin-left: auto;
     }
 }
+
+
+/* TEST */
+
+.skills-flex {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.skills-list {
+    position: absolute;
+    width: 230%;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 5px;
+    pointer-events: none;
+}
+
+.slide-skills {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    border: 0px solid black;
+    gap: 5px;
+}
+
+
+.skills-list img {
+    width: 150px;
+    height: 150px; 
+}
+
+/* .skills-flex:hover img {
+    animation: rotate-logo 8s ease-in-out 0s infinite ;
+} */
+
+
+.slide-skills > p {
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.slide-skills > h4 {
+    text-align: center;
+    color: black;
+    font-size: 1.3rem;
+}
+

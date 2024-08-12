@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <!-- Link CSS -->
         <link rel="stylesheet" href="style.css">
+
         <title>Brendon's Profile</title>
     </head>
 
@@ -44,9 +45,15 @@
                     </div>
                 </div>
             </nav>
-
+            
             <!-- MAIN CONTENT -->
             <main>
+                <div id="opt-btns" >
+                    <a href="#" class="control-btn" ><i class="fa-solid fa-arrow-up fa-2xl"></i></a>
+                    <a class="control-btn" id="sound-control" onclick="soundChange();" ><i class="fa-solid fa-volume-high fa-xl"></i></a>
+                </div>
+                <!-- PAGE AUDIO -->
+                <audio id="audio-player" controls src="./public/SynthRelax.wav" autoplay hidden loop ></audio>
                 
                 <section id="content">
 
@@ -65,20 +72,69 @@
                     <!-- SKILLS SECTION -->
                     <article id="skills" >
                         <h3>SKILLS</h3>
-                        <div id="skills-flex" >
-                            <ul>
-                                <li>Full stack development</li>
-                                <li>HTML, CSS & JavaScript</li>
-                                <li>React & NextJS</li>
-                                <li>Git</li>
-                            </ul>
-                        
-                            <ul>
-                                <li>NodeJS & ExpressJS</li>
-                                <li>C# & .NET</li>
-                                <li>Python </li>
-                                <li>PG/SQL</li>
-                            </ul>
+                        <div class="skills-flex" >
+                            <div class="skills-list" >
+                                <div class="slide-skills" id="html-skill" >
+                                    <img src="public/logo-img/html-logo.png" alt="HTML Logo">
+                                    <h4>HTML</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills" id="css-skill">
+                                    <img src="public/logo-img/css-logo.png" alt="CSS Logo">
+                                    <h4>CSS</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/javascript-logo.png" alt="HTML Logo">
+                                    <h4>JavaScript</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/react-logo.png" alt="CSS Logo">
+                                    <h4>React</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/nextjs-logo.png" alt="HTML Logo">
+                                    <h4>Next.js</h4>
+                                    <p>Years of Experience: 0.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/git-logo.png" alt="CSS Logo">
+                                    <h4>Git</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/node-logo.png" alt="HTML Logo">
+                                    <h4>Node.js</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/express-logo.png" alt="CSS Logo">
+                                    <h4>Express.js</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/Csharp-logo.png" alt="HTML Logo">
+                                    <h4>C#</h4>
+                                    <p>Years of Experience: 1 Year</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/dotnet-logo.png" alt="CSS Logo">
+                                    <h4>.NET Core</h4>
+                                    <p>Years of Experience: 1 Year</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/python-logo.png" alt="HTML Logo">
+                                    <h4>Python</h4>
+                                    <p>Years of Experience: 1.5 Years</p>
+                                </div>
+                                <div class="slide-skills">
+                                    <img src="public/logo-img/postgresql-logo.png" alt="CSS Logo">
+                                    <h4>PostgreSQL</h4>
+                                    <p>Years of Experience: 1 Year</p>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     <br/>
@@ -215,5 +271,8 @@
                 </div>
             </div>
         </footer>
+
+        <!-- SCRIPT -->
+        <script src="script.js"></script>
     </body>
 </html>
