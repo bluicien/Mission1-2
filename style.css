@@ -22,6 +22,11 @@
     100% { transform: rotate(0deg);}
 }
 
+@keyframes form-appear {
+    0% { scale: 0.5; opacity: 0; }
+    100% { scale: 1; opacity: 1; }
+}
+
 
 /* ===== PAGE STYLING ========== */
 
@@ -49,6 +54,7 @@ hr {
 
 ::selection {
     background-color: #8a75ff;
+    color: white;
 }
 
 ::-webkit-scrollbar {
@@ -76,7 +82,7 @@ header {
     background: url("/public/code-blue.gif") no-repeat ;
     background-size: cover;
     height: 15%;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 header > h1 {
@@ -97,7 +103,7 @@ header > h1 {
 #nav-container {
     position: sticky;
     width: 10%;
-    min-width: 160px;
+    min-width: 120px;
 }
 #nav-bar {
     overflow: hidden;
@@ -140,7 +146,7 @@ header > h1 {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 120px;
     width: 100%;
     box-shadow: 0px 3px 10px 0px #5a5a5a79 ;
     z-index: 10;
@@ -210,7 +216,7 @@ main {
     cursor: pointer;
 }
 
-.control-btn:hover, #sound-control:hover {
+.hover-sound-btn {
     background-color: white;
     color: #333;
 }
@@ -227,7 +233,7 @@ main {
     list-style: circle
 }
 
-article > h3 {
+.section-heading {
     font-size: 2rem;
     font-weight: 900;
     font-style: italic;
@@ -265,12 +271,52 @@ article > ul > li:hover,
 
 /* ===== FORM CSS ===== */
 
-fieldset {
+#form-select {
     margin-top: 2rem;
-    padding: 20px;
-    width: 30%;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.formSelectBtn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    background-color: whitesmoke;
+    color: black;
+    border: outset rgba(128, 128, 128, 0.568);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.unselectedFormBtn {
+    background-color: whitesmoke;
+    color: black;
+    border: outset rgba(128, 128, 128, 0.568);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.hoveredBtn {
+    background-color: #8a75ff;
+    color: white;
+    transition: 800ms;
+}
+
+.pressedBtn {
+    background-color: #4e0322;
+    color: white;
+    border: inset rgb(167, 167, 167);
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+fieldset {
+    margin-top: 3rem;
+    padding: 1rem;
+    width: 50%;
+    min-width: 340px;
     background-color: #cccccc6c;
     transition: 1s;
+    animation: form-appear linear;
+    animation-duration: 400ms;
 }
 
 legend {
@@ -282,7 +328,9 @@ legend {
 }
 
 #contact-me-btn {
-    width: 150px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 200px;
     padding: 0.5rem 2rem;
     background-color: #333;
     color: white;
@@ -302,7 +350,7 @@ legend {
     box-shadow: none;
 }
 
-#contact-form {
+#contact-form, #recommendation-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -323,9 +371,14 @@ textarea:focus::placeholder,
 input:focus::placeholder,
 select option {
     background-color:#bfb4ff;
-    color: white;
+    color: black;
 }
 
+.user-recommendation {
+    margin-bottom: 2rem;
+    width: 50%;
+    min-width: 340px;
+}
 
 /* ========== FOOTER STYLING ========== */
 

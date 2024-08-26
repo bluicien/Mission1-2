@@ -14,6 +14,8 @@
         <!-- Link CSS -->
         <link rel="stylesheet" href="style.css">
 
+        <!-- Link Script -->
+        <script src="script.js" defer></script>
         <title>Brendon's Profile</title>
     </head>
 
@@ -50,7 +52,7 @@
             <main>
                 <div id="opt-btns" >
                     <a href="#" class="control-btn" ><i class="fa-solid fa-arrow-up fa-2xl"></i></a>
-                    <a class="control-btn" id="sound-control" onclick="soundChange();" ><i class="fa-solid fa-volume-high fa-xl"></i></a>
+                    <a id="sound-control" class="control-btn"><i class="fa-solid fa-volume-high fa-xl"></i></a>
                 </div>
                 <!-- PAGE AUDIO -->
                 <audio id="audio-player" controls src="./public/SynthRelax.wav" autoplay hidden loop ></audio>
@@ -59,7 +61,7 @@
 
                     <!-- CV INTRODUCTION -->
                      <article  id="intro" >
-                        <h3>PERSONAL PROFILE</h4>
+                        <h3 class="section-heading">PERSONAL PROFILE</h4>
                         <p id="intro-p" >Etiam et suscipit diam. Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci 
                             luctus et ultrices posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, 
                             sit amet tempus tortor bibendum. Curabitur nec ligula tellus. Aenean dapibus dapibus tellus in pellentesque. 
@@ -71,7 +73,7 @@
                     
                     <!-- SKILLS SECTION -->
                     <article id="skills" >
-                        <h3>SKILLS</h3>
+                        <h3 class="section-heading">SKILLS</h3>
                         <div class="skills-flex" >
                             <div class="skills-list" >
                                 <div class="slide-skills" id="html-skill" >
@@ -142,7 +144,7 @@
                     
                     <!-- EDUCATION SECTION -->
                      <article id="education" >
-                            <h3>EDUCATION</h3>
+                            <h3 class="section-heading">EDUCATION</h3>
                             <ul>
                                 <li>
                                 <h4>BACHELOR OF ENGINEERING (HONS), AUT - AUCKLAND UNIVERSITY OF TECHNOLOGY</h4>
@@ -188,7 +190,7 @@
                     <hr/>
                     <!-- WORK EXPERIENCE SECTION -->
                     <article id="career" >
-                        <h3>CAREER</h3>
+                        <h3 class="section-heading">CAREER</h3>
                         <ul>
                             <li>
                                 <h4>ADVANCED PERSONNEL SERVICES LIMITED</h4>
@@ -214,17 +216,22 @@
 
                     <!-- INTERESTS SECTION -->
                      <article id="interests" >
-                        <h3>INTERESTS</h3>
+                        <h3 class="section-heading">INTERESTS</h3>
                         <p id="interests-p" >In my free time I like to do gardening and working out. I also enjoy playing video games, reading comics 
                             and watching anime. I am competent in reading and speaking Japanese which I learned through my 
                             hobbies. I have developed a new interest in software engineering which led me to seek a new career as a fullstack developer.
                         </p>
                     </article>
 
+                    <div id="form-select" >
+                        <button id="select-recommend" class="formSelectBtn pressedBtn" >Recommendation</button>
+                        <button id="select-contact" class="formSelectBtn unselectedFormBtn " >Contact Me</button>
+                    </div>
+
                     <!-- CONTACT ME FORM SECTION -->
-                    <fieldset id="form-popup" >
+                    <fieldset id="contact-form-field" hidden >
                         <legend >
-                            <h3 id="contact" >CONTACT ME</h3>
+                            <h3>CONTACT ME</h3>
                         </legend>
 
                         <form action="mailto:brendonl@missionreadyhq.com" id="contact-form" >
@@ -252,8 +259,60 @@
 
                     </fieldset>
 
-                </section>
+                    <!-- RECOMMENDATION FORM SECTION -->
+                    <fieldset id="recommendation-form-field" >
+                        <legend >
+                            <h3>Recommendation</h3>
+                        </legend>
 
+                        <form enctype="multipart/form-data" id="recommendation-form" method="post" name="recommendation-form" >
+
+                            <div>
+                                <label>Rating : </label>
+                                <span id="star-group" >
+                                    <i id="rating-1" class="fa-regular fa-star ratings"></i>
+                                    <i id="rating-2" class="fa-regular fa-star ratings"></i>
+                                    <i id="rating-3" class="fa-regular fa-star ratings"></i>
+                                    <i id="rating-4" class="fa-regular fa-star ratings"></i>
+                                    <i id="rating-5" class="fa-regular fa-star ratings"></i>
+                                </span>
+                            </div>
+                            <input type="number" id="rating-input" name="rating" value="0" hidden>
+                            
+                            <label for="name" >Name : </label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe" >
+                            <label for="message" >Message : </label>
+                            <textarea id="message" name="recommendation" required placeholder="Write your comment..." ></textarea>
+                            <button type="submit" id="contact-me-btn" >Submit</button>
+                        </form>
+
+                    </fieldset>
+                    <br/>
+                    <hr/>
+
+                    <!-- RECOMMENDATION POSTS SECTION -->
+                    <section id="recommendation-posts">
+                        <h3 class="section-heading" >Recommendations</h3>
+                        <div id="recommendations-container">
+                            <!-- <article class="user-recommendation">
+                                <h4>Brendon Luicien</h4>
+                                <div>
+                                    <i class="fa-solid fa-star" style="color:#ffd952"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffd952"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffd952"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffd952"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p>
+                                    Etiam et suscipit diam. Vivamus interdum nibh id iaculis consectetur. Vestibulum ante ipsum primis in faucibus orci 
+                                    luctus et ultrices posuere cubilia curae; Proin et blandit turpis. Duis dictum nunc vel orci malesuada, 
+                                    sit amet tempus tortor bibendum. Curabitur nec ligula tellus. Aenean dapibus dapibus tellus in pellentesque. 
+                                    Nunc cursus lacus non libero accumsan, et bibendum nibh feugiat. 
+                                </p>
+                            </article> -->
+                        </div>
+                    </section>
+                </section>
             </main>
         </div>
 
@@ -272,7 +331,5 @@
             </div>
         </footer>
 
-        <!-- SCRIPT -->
-        <script src="script.js"></script>
     </body>
 </html>
