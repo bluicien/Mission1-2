@@ -374,10 +374,28 @@ select option {
     color: black;
 }
 
+
+/* ========== RECOMMENDATIONS STYLING ========== */
+
 .user-recommendation {
     margin-bottom: 2rem;
     width: 50%;
     min-width: 340px;
+}
+
+.star-overview {
+    display: flex;
+    height: 1.5rem;
+    width: 15rem;
+}
+
+.star-overview > span {
+    width: 20%;
+}
+
+.star-overview > div {
+    height: 85%;
+    background-color: #ffd952;
 }
 
 /* ========== FOOTER STYLING ========== */
@@ -448,6 +466,10 @@ footer a {
     #social-links {
         flex-direction: column;
         margin-left: auto;
+    }
+
+    #opt-btns {
+        flex-direction: column;
     }
 }
 

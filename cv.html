@@ -11,11 +11,14 @@
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <!-- Confetti -->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+        <script  type="module" src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
         <!-- Link CSS -->
         <link rel="stylesheet" href="style.css">
-
-        <!-- Link Script -->
+        <!-- Link Scripts -->
         <script src="script.js" defer></script>
+        <script src="recommendations.js" defer></script>
         <title>Brendon's Profile</title>
     </head>
 
@@ -42,6 +45,7 @@
                             <a href="#career" >Career</a>
                             <a href="#interests" >Interests</a>
                             <a href="#contact" >Contact Me</a>
+                            <a href="#recommendation-posts" >Recommendations</a>
                             <a href="https://www.linkedin.com/in/bluicien-bl2" id="nav-linkedin" target="_blank" >LinkedIn <i class="fa-brands fa-linkedin fa-xl"></i></a>
                         </div>
                     </div>
@@ -224,8 +228,8 @@
                     </article>
 
                     <div id="form-select" >
+                        <button id="select-contact" class="formSelectBtn unselectedFormBtn" >Contact Me</button>
                         <button id="select-recommend" class="formSelectBtn pressedBtn" >Recommendation</button>
-                        <button id="select-contact" class="formSelectBtn unselectedFormBtn " >Contact Me</button>
                     </div>
 
                     <!-- CONTACT ME FORM SECTION -->
@@ -247,8 +251,9 @@
                                 <option value="" selected disabled>-- Contact Reason --</option>
                                 <option value="job-offer">Job Offer</option>
                                 <option value="social">Social</option>
-                                <option value="other" >Other <input type="text" placeholder="Other" ></option>
+                                <option value="other" >Other</option>
                             </select>
+                            <input type="text" placeholder="Other" hidden >
                             
                             <label for="date" >Date : </label>
                             <input type="date" id="date">
@@ -292,7 +297,32 @@
 
                     <!-- RECOMMENDATION POSTS SECTION -->
                     <section id="recommendation-posts">
-                        <h3 class="section-heading" >Recommendations</h3>
+                        <h3 class="section-heading" >RECOMMENDATIONS</h3>
+
+                        <div id="overview" >
+                            <p><span id="num-recommendations" >0</span> recommendations</p>
+                            <div class="star-overview">
+                                <span>1 Star</span>
+                                <div id="bar-1"></div>
+                            </div>
+                            <div class="star-overview">
+                                <span>2 Star</span>
+                                <div id="bar-2"></div>
+                            </div>
+                            <div class="star-overview">
+                                <span>3 Star</span>
+                                <div id="bar-3"></div>
+                            </div>
+                            <div class="star-overview">
+                                <span>4 Star</span>
+                                <div id="bar-4"></div>
+                            </div>
+                            <div class="star-overview">
+                                <span>5 Star</span>
+                                <div id="bar-5"></div>
+                            </div>
+                        </div>
+
                         <div id="recommendations-container">
                             <!-- <article class="user-recommendation">
                                 <h4>Brendon Luicien</h4>
