@@ -391,11 +391,23 @@ select option {
 
 .star-overview > span {
     width: 20%;
+    font-weight: bold;
 }
 
 .star-overview > div {
     height: 85%;
     background-color: #ffd952;
+}
+
+#user-feedback {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+#recommendations-container {
+    width: 50%;
+    padding: 1rem;
+    border: 2px #33333379 outset;
 }
 
 /* ========== FOOTER STYLING ========== */
