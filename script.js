@@ -8,8 +8,8 @@ let pressed = false;
 let startx;
 let x;
 
-console.log(slider)
-console.log(innerSlider)
+console.log(slider);
+console.log(innerSlider);
 
 slider.addEventListener("mousedown", (e) => {
   pressed = true;
@@ -41,7 +41,6 @@ slider.addEventListener("mousemove", (e) => {
 
   innerSlider.style.left = `${x - startx}px`;
   checkBoundary();
-
 });
 
 function checkBoundary(x, startx) {
@@ -58,6 +57,7 @@ function checkBoundary(x, startx) {
 
 // ========== CAROUSEL SPIN ANIMATION SCRIPTS ========== //
 
+
 // Run spin icon function when mouse hovers over slider
 slider.addEventListener("mousemove", spinIcon);
 
@@ -66,28 +66,29 @@ slider.addEventListener("mousemove", spinIcon);
 function spinIcon(e) {
   let sliderChildren = innerSlider.getElementsByClassName("slide-skills")
   
+
   for (let i = 0; i < sliderChildren.length; i++) {
     let iconPosition = sliderChildren[i].getBoundingClientRect();
     if (checkHover(e, iconPosition)) {
       // console.log(`Your mouse is at ${e.clientX}-X and ${e.clientY}-Y`)
-      sliderChildren[i].children[0].style.animation = "rotate-logo 8s ease-in-out 0s";
+      sliderChildren[i].children[0].style.animation =
+        "rotate-logo 8s ease-in-out 0s";
     }
   }
 }
 
 // Function takes 2 arguments, mouse event and element position from getBoundingClientRect()
 // and de-structures them. Then checks if the mouse is hovering over the element
-function checkHover ({clientX, clientY}, {x, y, width, height}) {
-
+function checkHover({ clientX, clientY }, { x, y, width, height }) {
   let rightSideX = x + width; // X coord for right side of the element
   let bottomSideY = y + height; // Y coord for bottom side of the element
 
   // Check if mouse is within the coords of the element and return true if it is
   if (
-    (clientX + 1)>= x &&
-    (clientX - 1) <= rightSideX &&
-    (clientY + 1)>= y &&
-    (clientY - 1) <= bottomSideY
+    clientX + 1 >= x &&
+    clientX - 1 <= rightSideX &&
+    clientY + 1 >= y &&
+    clientY - 1 <= bottomSideY
   ) {
     return true;
   } else {
@@ -109,6 +110,7 @@ function soundChange() {
 
   const mute = '<i class="fa-solid fa-volume-xmark fa-xl" style="backgroundColor: white"></i>' // Muted icon
   const soundOn = '<i class="fa-solid fa-volume-high fa-xl"></i>' // Sound icon
+
 
   // Switch mute on/off based on current state
   audioPlayer.muted = !audioPlayer.muted;
