@@ -189,7 +189,6 @@ function updateRecommendationsList(recommendationData) {
     const article = document.createElement("article"); // Container for each user feedback
     const h4 = document.createElement("h4"); // User's name
     const div = document.createElement("div"); // Container for stars for rating
-    const star = []; // Array where each element will be filled with a star icon based on user rating
     const p = document.createElement("p"); // User message
     const emoticon = document.createElement("i") // Icon to show emotion of user feedback
     
@@ -216,19 +215,19 @@ function updateRecommendationsList(recommendationData) {
     // Loop from 1-5 for user ratings
     for (let i=1; i<=5; i++) {
       // Created an i tag and store in star array at position i
-      star[i] = document.createElement("i")
+      let star = document.createElement("i")
       
       // If i is <= to the rating user gave, add class and styling for a filled star
       // else, add class for empty star
       if (i <= post.rating) {
-        star[i].classList.add("fa-solid", "fa-star")
-        star[i].style.color = "#ffd952";
+        star.classList.add("fa-solid", "fa-star")
+        star.style.color = "#ffd952";
       } else {
-        star[i].classList.add("fa-regular", "fa-star")
+        star.classList.add("fa-regular", "fa-star")
       }
 
       // Append star at position i to div
-      div.appendChild(star[i])
+      div.appendChild(star)
     }
     
     // Set innerText of p tag to the user's recommendation message
@@ -294,7 +293,6 @@ function updateTally() {
       default:
         break;
     }
-
   }
 
   // Calculate percentage of the total recommendations and fill the bar
@@ -307,45 +305,3 @@ function updateTally() {
     barElement.style.width = `${barFillPercentage}px`
   }
 }
-
-
-// REPLACED WITH STATIC PROPERTY IN Review Class
-
-// function countRatings(recommendationArr) {
-//   const ratingCountObj = {
-//     oneStar: 0,
-//     twoStar: 0,
-//     threeStar: 0,
-//     fourStar: 0,
-//     fiveStar: 0,
-//     total: 0
-//   }
-
-//   for (const post of recommendationArr) {
-//     switch (post.rating) {
-//       case 1:
-//         ratingCountObj.oneStar++;
-//         ratingCountObj.total++;
-//         break;
-//       case 2:
-//         ratingCountObj.twoStar++;
-//         ratingCountObj.total++;
-//         break;
-//       case 3:
-//         ratingCountObj.threeStar++;
-//         ratingCountObj.total++;
-//         break;
-//       case 4:
-//         ratingCountObj.fourStar++;
-//         ratingCountObj.total++;
-//         break;
-//       case 5:
-//         ratingCountObj.fiveStar++;
-//         ratingCountObj.total++;
-//         break;
-//       default:
-//         break;
-//     }
-//   }
-//   return ratingCountObj;
-// }

@@ -105,12 +105,10 @@ soundBtn.addEventListener("mouseleave", () => soundBtn.classList.remove("hover-s
 
 // Background music mute on/off
 function soundChange() {
-  const audioPlayer = document.getElementById("audio-player"); // audio html for background music
-  console.log(soundBtn)
+  const audioPlayer = document.getElementById("audio-player"); // Get audio html for background music
 
   const mute = '<i class="fa-solid fa-volume-xmark fa-xl" style="backgroundColor: white"></i>' // Muted icon
   const soundOn = '<i class="fa-solid fa-volume-high fa-xl"></i>' // Sound icon
-
 
   // Switch mute on/off based on current state
   audioPlayer.muted = !audioPlayer.muted;
@@ -219,15 +217,17 @@ selectContactBtn.addEventListener("click", selectForm)
 
 // Adds the hoveredBtn class to the button that triggers the event
 function hoverFormSelectBtn({target}) {
+  // If the function that triggered event is not the same as currently selected button
   if (target.id !== selectedBtnId) {
     target.classList.add("hoveredBtn")
   }
+  return;
 }
 
 // Removes the hoveredBtn class from the button that triggers the event
 function leaveFormSelectBtn({target}) {
   target.classList.remove("hoveredBtn")
-  
+  return;
 }
 
 // When the event is triggered, queries the element using the id stored in
@@ -237,15 +237,22 @@ function leaveFormSelectBtn({target}) {
 // the same as the button that triggered the event. Invert the hidden boolean of both forms
 function selectForm({target}) {
   const currentSelected = document.getElementById(selectedBtnId);
-  currentSelected.classList.remove("pressedBtn")
-  
-  selectedBtnId = target.id;
-  target.classList.add("pressedBtn")
 
+  // If currently selected button is clicked, do nothing
   if (currentSelected !== target) {
+    // Remove pressedBtn class from current selected button
+    currentSelected.classList.remove("pressedBtn")
+    
+    // Add pressed class to clicked button
+    target.classList.add("pressedBtn")
+    // Assign id of selected button to selectedBtnId variable.
+    selectedBtnId = target.id;
+
+    // Toggle hidden feature between forms
     recommendationFormField.hidden = !recommendationFormField.hidden
     contactFormField.hidden = !contactFormField.hidden
   }
+  return;
 }
 
 // ========== SUBMIT FORM DATA SCRIPTS ========== //
